@@ -6,7 +6,7 @@ import { headers } from 'next/headers';
 export const Providers: React.FC<{
   children: React.ReactNode;
   userAgent?: string;
-}> = ({ children, userAgent }) => {
+}> = ({ children }) => {
   const { ua } = getUserAgent({ headers: headers() });
   return <UserAgentProvider userAgent={ua}>{children}</UserAgentProvider>;
 };
